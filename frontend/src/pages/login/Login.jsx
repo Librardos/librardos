@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../../context/AuthContext";
 import "./login.css";
 import welcomeImage from '../../images/welcomeimage.jpeg';
+import { GoogleOAuthProvider, GoogleLogin } from "@react-oauth/google";
 
 export const Login = () => {
   const [credentials, setCredentials] = useState({
@@ -29,6 +30,15 @@ export const Login = () => {
     } catch (err) {
       dispatch({ type: "LOGIN_FAILURE", payload: err.response.data });
     }
+  };
+
+  const handleSuccess = (response) => {
+    console.log("Token ID:", response.credential); // Token que se envía al backend
+    // Aquí puedes enviar el token al backend para validarlo
+  };
+
+  const handleError = () => {
+    console.log("Error al iniciar sesión con Google");
   };
 
 
@@ -70,9 +80,26 @@ export const Login = () => {
               <button disabled={loading} className="btn btn-lg btn-primary btn-block"> Login </button>
             {error && <span>{error.message}</span>}
             </form>
-          </div>
+          </div> 
         </div>
+        
+      <button disabled={loading} className="btn btn-lg btn-success btn-block"> Iniciar sesion con Google </button>
       </div>
+    {/* <GoogleOAuthProvider clientId="TU_CLIENT_ID">
+      <GoogleLogin
+        onSuccess={handleSuccess}
+        onError={handleError}
+        render={renderProps => (
+          <button 
+            onClick={renderProps.onClick} 
+            disabled={renderProps.disabled} 
+            className="btn btn-lg btn-success btn-block"
+          >
+            Iniciar sesión con Google
+          </button>
+        )}
+      />
+    </GoogleOAuthProvider> */}
     </div>
     </div>
     </>
