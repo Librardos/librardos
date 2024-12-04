@@ -1,17 +1,22 @@
-# librardos
+# Librardos
 
-# Ejecucion
+# Ejecución
 
-Preparar config de la Base de Dato:
-- Agregar el archivo .env en /api a partir del ejemplo de .envexample
+## Configuración
+- Agregar el archivo `.env` en /api a partir del ejemplo de .envexample
+- Agregar el archivo `.env` en /frontend a partir del ejemplo de .envexample
 
-Instalar dependencias:
-- Tirar npm install en /api
-- Tirar npm install en /frontend
-- Tirar npm install lucid-react en /frontend para los iconos
-- Tirar npm install @react-oauth/google
+## Dependencias
+- Correr `npm install` en /api
+- Correr `npm install --force` en /frontend
+- Correr `npm install lucid-react` en /frontend para los iconos
+- Correr `npm install @react-oauth/google` en /frontend para el login con google
 
 
-Correr programas:
-- Correr npm run dev en /api
-- Correr npm run start en /frontend
+## Correr programas
+- Correr `npm run dev` en /api en una terminal
+- Correr `npm run start` en /frontend en otra terminal
+
+Esto abrira en el localhost 4000 el servidor y en localhost 3000 el cliente.
+
+Es posible que al no tener los .env para acceder a la base de datos no se pueda probar en local, pero se deja a disposición el link a la página que esta hosteada en Vercel https://librardos-client.vercel.app/
