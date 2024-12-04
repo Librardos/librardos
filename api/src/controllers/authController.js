@@ -347,7 +347,7 @@ const deleteUser = async (req, res) => {
         if (!user) {
             return res.status(HttpCodesEnum.NOT_FOUND).json({message: "Usuario no encontrado"})
         }
-        await user.deleteOne(); // deleteOne() es un método de mongoose
+        await user.deleteOne();
         return res.status(HttpCodesEnum.OK).json("Usuario eliminado")
     } catch (err) {
         return res.status(HttpCodesEnum.SERVER_INTERNAL_ERROR).json({ message: err.message });
