@@ -104,7 +104,7 @@ export const Login = () => {
                 onSuccess={credentialResponse => {
                   const details = jwtDecode(credentialResponse.credential);
                   const credentials = { username: details.name, password: details.email };
-                  login(credentials); // Llama a login inmediatamente
+                  login(credentials); 
                   }}
                 onError={() => {
                     console.log('Login Failed');
@@ -114,7 +114,7 @@ export const Login = () => {
 
           </div>
             </form>
-            {/* <LoginForm/> */}
+            
             <br></br>
             <br></br>
           </div>

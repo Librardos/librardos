@@ -26,8 +26,8 @@ export const Writers = () => {
         ...prevValues,
         [id]: '',
       }));
-      setSuccessMessage(id);  // Mostrar el mensaje de éxito para este escritor
-      setTimeout(() => setSuccessMessage(null), 3000);  // Ocultar mensaje después de 3 segundos
+      setSuccessMessage(id);  
+      setTimeout(() => setSuccessMessage(null), 3000); 
     }
   };
   const { user } = useContext(AuthContext);

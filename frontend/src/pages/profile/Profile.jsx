@@ -36,7 +36,7 @@ export const Profile = () => {
   };
 
   const getCommunities = async () => {
-    const communities = await axios.get("/api/community");  // todas las communities
+    const communities = await axios.get("/api/community"); 
     const myCommunities = [];
     for (const community of communities.data) {
       if (community.users.includes(user._id)) {
@@ -65,7 +65,7 @@ export const Profile = () => {
   };
 
   const handleListOfCommunities = async (friend_name) => {
-    const communities = await axios.get("/api/community");  // todas las communities
+    const communities = await axios.get("/api/community");  
     const friend = await axios.post("/auth/name", { username: friend_name });
     const communities_of_my_friend = [];
     for (const community of communities.data) {

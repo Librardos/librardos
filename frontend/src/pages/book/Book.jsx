@@ -7,7 +7,6 @@ import { AuthContext } from '../../context/AuthContext';
 import './book.css';
 import BookRating from '../../components/Stars/Stars';
 import moment from 'moment';
-// import { stat } from 'fs';
 
 export const Book = () => {
   const [book, setBook] = useState({});
@@ -18,7 +17,6 @@ export const Book = () => {
   const params = useParams()
 
   const handleFavorite = async (id) => {
-    // alert("Libro añadido a favoritos");
     await axios.post(`/api/book/fav/${id}`, { user_id: user._id });
   }
 
@@ -31,16 +29,12 @@ export const Book = () => {
 
   const handleStatusChange = async (id, status) => {
     if (status === "Leido") {
-      // Logic for when the status is "Leido"
       await axios.post(`/api/book/readBooks/${id}`, { user_id: user._id});
     } else if (status === "Leyendo") {
       await axios.post(`/api/book/readingBooks/${id}`, { user_id: user._id});
-      // Logic for when the status is "Leyendo"
     } else if (status === "Por Leer") {
       await axios.post(`/api/book/toReadBooks/${id}`, { user_id: user._id});
-      // Logic for when the status is "Por Leer"
     }
-    // You can add your logic to handle the status change here
   };
 
   const addBookToPersonalList = async (id) => {

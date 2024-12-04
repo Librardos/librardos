@@ -30,13 +30,13 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Estilos para el Navbar */
+
 .navbar {
   background-color: var(--navbar-bg);
   color: var(--navbar-text);
 }
 
-/* Estilos generales que se aplicarán a todas las páginas */
+
 .card {
   background-color: var(--card-bg);
   border-color: var(--card-border);
@@ -53,4 +53,3 @@ input, textarea, select {
   color: var(--text-color);
 }
 
-/* Añade más estilos generales según sea necesario */

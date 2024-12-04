@@ -73,11 +73,7 @@ export const Navbar = () => {
           </button>
 
           <div className="user-profile">
-            {/* if (user.isPremium) {
-              <span className="premium-badge">
-                  <Link to={'/profile'}>{user.username + getEmoji(user.level)} </Link>
-              </span>
-            } */}
+            
             <span className="username">
               <Link to={'/profile'} style={{ color: user.isPremium ? "gold" : "blue" }}>{user.username + getEmoji(user.isAdmin)}</Link>
             </span>

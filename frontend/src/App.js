@@ -20,7 +20,7 @@ import { User } from './pages/user/User';
 import { Profile } from './pages/profile/Profile';
 import { EditProfile } from './pages/editProfile/EditProfile';
 import './app.css'
-import './styles.css' // Make sure to import the styles for the Navbar and themes
+import './styles.css' 
 import { Writers } from './pages/writers/Writers';
 import PremiumCheckout from './pages/premiumCheckout/PremiumCheckout';
 import { RegisterModerator } from './pages/registerModerator/RegisterModerator';
